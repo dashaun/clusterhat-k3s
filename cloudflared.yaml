@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: cloudflared
-        image: dashaun/cloudflared-linux-arm64:2022.7.1
+        image: dashaun/cloudflared-linux-arm64:2022.11.0
         args:
         - tunnel
         - --config
