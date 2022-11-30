@@ -40,4 +40,11 @@ kubectl patch configmap/config-domain \
   --namespace knative-serving \
   --type merge \
   --patch '{"data":{"kn.dashaun.dev":""}}'
+
+```
+
+## Setup Cloudflared with Envoy
+
+```bash
+kubectl apply -f https://raw.githubusercontent.com/dashaun/clusterhat-k3s/main/cloudflared.yaml
 ```
