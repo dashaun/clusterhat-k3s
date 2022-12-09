@@ -3535,7 +3535,7 @@ spec:
             - --contour-cafile=/certs/ca.crt
             - --contour-cert-file=/certs/tls.crt
             - --contour-key-file=/certs/tls.key
-            - --config-path=/config/contour.yaml
+            - --config-path=/config/3-contour.yaml
           command:
             - contour
           image: ghcr.io/projectcontour/contour:v1.22.0
@@ -3594,7 +3594,7 @@ spec:
             defaultMode: 420
             items:
               - key: contour.yaml
-                path: contour.yaml
+                path: 3-contour.yaml
 ---
 apiVersion: apps/v1
 kind: DaemonSet
@@ -3661,7 +3661,7 @@ spec:
             - --log-level info
           command:
             - envoy
-          image: docker.io/envoyproxy/envoy:v1.23.0
+          image: docker.io/envoyproxy/envoy:v1.24.0
           imagePullPolicy: IfNotPresent
           name: envoy
           env:
@@ -4175,7 +4175,7 @@ spec:
             - --contour-cafile=/certs/ca.crt
             - --contour-cert-file=/certs/tls.crt
             - --contour-key-file=/certs/tls.key
-            - --config-path=/config/contour.yaml
+            - --config-path=/config/3-contour.yaml
           command:
             - contour
           image: ghcr.io/projectcontour/contour:v1.22.0
@@ -4234,7 +4234,7 @@ spec:
             defaultMode: 420
             items:
               - key: contour.yaml
-                path: contour.yaml
+                path: 3-contour.yaml
 ---
 apiVersion: apps/v1
 kind: DaemonSet
@@ -4301,7 +4301,7 @@ spec:
             - --log-level info
           command:
             - envoy
-          image: docker.io/envoyproxy/envoy:v1.23.0
+          image: docker.io/envoyproxy/envoy:v1.24.0
           imagePullPolicy: IfNotPresent
           name: envoy
           env:
